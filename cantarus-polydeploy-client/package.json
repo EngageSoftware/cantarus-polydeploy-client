@@ -1,0 +1,17 @@
+{
+  "name": "cantarus-polydeploy-client",
+  "version": "0.1.7",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "keywords": [
+    "vsts",
+    "dnn",
+    "polydeploy"
+  ],
+  "author": "Brian Dukes",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "vsts-task-lib": "^2.4.0"
+  }
+}

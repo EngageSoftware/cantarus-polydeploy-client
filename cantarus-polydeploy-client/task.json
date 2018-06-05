@@ -1,0 +1,65 @@
+{
+  "id": "eb4f5c5e-f573-4b6e-8641-daf49ff6cf3d",
+  "name": "cantarus-polydeploy-client",
+  "friendlyName": "Cantarus PolyDeploy for DNN",
+  "description": "Deploy extensions to a DNN site using the Cantarus PolyDeploy client",
+  "helpMarkDown": "",
+  "category": "Deploy",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "author": "Brian Dukes",
+  "version": {
+    "Major": 0,
+    "Minor": 1,
+    "Patch": 7
+  },
+  "instanceNameFormat": "$(name)",
+  "groups": [
+    {
+      "name": "advanced",
+      "displayName": "Advanced",
+      "isExpanded": false
+    }
+  ],
+  "inputs": [
+    {
+      "name": "deploy-path",
+      "type": "filePath",
+      "label": "Deploy Path",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "The path in which to find the packages to deploy"
+    },
+    {
+      "name": "target-uri",
+      "type": "strubg",
+      "label": "Target URI",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "The URL to the DNN site to which extensions will be deployed"
+    },
+    {
+      "name": "api-key",
+      "type": "string",
+      "label": "API Key",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "The API key of the PolyDeploy API user"
+    },
+    {
+      "name": "encryption-key",
+      "type": "string",
+      "label": "Encryption Key",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "The Encryption key of the PolyDeploy API user"
+    }
+  ],
+  "execution": {
+    "Node": {
+      "target": "index.js"
+    }
+  }
+}
