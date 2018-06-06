@@ -1,6 +1,6 @@
 {
   "name": "cantarus-polydeploy-client",
-  "version": "0.1.7",
+  "version": "0.1.13",
   "description": "",
   "private": true,
   "main": "index.js",
