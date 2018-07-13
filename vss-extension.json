@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "cantarus-polydeploy-client",
   "name": "Cantarus PolyDeploy for DNN",
-  "version": "0.1.13",
+  "version": "0.2.0",
   "publisher": "briandukes",
   "targets": [
     {
