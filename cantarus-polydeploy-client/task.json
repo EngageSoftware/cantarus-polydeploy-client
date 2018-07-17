@@ -2,18 +2,16 @@
   "id": "eb4f5c5e-f573-4b6e-8641-daf49ff6cf3d",
   "name": "cantarus-polydeploy-client",
   "friendlyName": "Cantarus PolyDeploy for DNN",
-  "description": "Deploy extensions to a DNN site using the Cantarus PolyDeploy client",
+  "description":
+    "Deploy extensions to a DNN site using the Cantarus PolyDeploy client",
   "helpMarkDown": "",
   "category": "Deploy",
-  "visibility": [
-    "Build",
-    "Release"
-  ],
+  "visibility": ["Build", "Release"],
   "author": "Brian Dukes",
   "version": {
     "Major": 0,
     "Minor": 2,
-    "Patch": 0
+    "Patch": 1
   },
   "instanceNameFormat": "$(name)",
   "groups": [
@@ -38,7 +36,8 @@
       "label": "Target URI",
       "defaultValue": "",
       "required": true,
-      "helpMarkDown": "The URL to the DNN site to which extensions will be deployed"
+      "helpMarkDown":
+        "The URL to the DNN site to which extensions will be deployed"
     },
     {
       "name": "api-key",
