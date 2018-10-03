@@ -9,7 +9,7 @@
     "dnn",
     "polydeploy"
   ],
-  "author": "Brian Dukes",
+  "author": "Engage Software",
   "license": "Apache-2.0",
   "dependencies": {
     "vsts-task-lib": "^2.7.0"

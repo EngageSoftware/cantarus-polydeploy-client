@@ -6,7 +6,7 @@
   "helpMarkDown": "",
   "category": "Deploy",
   "visibility": ["Build", "Release"],
-  "author": "Brian Dukes",
+  "author": "Engage Software",
   "version": {
     "Major": 0,
     "Minor": 8,
