@@ -28,5 +28,9 @@
         "name": "cantarus-polydeploy-client"
       }
     }
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/EngageSoftware/cantarus-polydeploy-client"
+  }
 }
