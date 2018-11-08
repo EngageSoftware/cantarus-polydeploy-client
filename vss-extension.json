@@ -12,7 +12,7 @@
   "description": "Tools for deploying DNN extensions with Cantarus PolyDeploy. Includes one build/release task.",
   "categories": ["Build and release"],
   "icons": {
-    "default": "polydeploy-logo-icon.png"
+    "default": "images/polydeploy-logo-icon.png"
   },
   "content": {
     "details": {
@@ -24,10 +24,7 @@
       "path": "cantarus-polydeploy-client"
     },
     {
-      "path": "task-config-screenshot.png"
-    },
-    {
-      "path": "polydeploy-logo-icon.png"
+      "path": "images"
     }
   ],
   "contributions": [
