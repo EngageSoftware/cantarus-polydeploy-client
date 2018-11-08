@@ -13,10 +13,10 @@ for the user's API Key and Encryption Key.
 
 When adding the task to a pipeline, you'll fill in the variables into the task's
 configuration.  Set the _Target URI_ to the root URL of the website (e.g.
-https://example.com), and set the _Deploy Path_ to the folder with your packages
+`https://example.com`), and set the _Deploy Path_ to the folder with your packages
 to install.  The task will automatically find any `*.zip` files in that folder
 and its subfolders and pass them to the PolyDeploy client to be installed.
-![Task configuration screen](./images/task-config-screenshot.png)
+![Task configuration screen](./static/task-config-screenshot.png)
 
 This version of the task includes version 0.8.0 of the PolyDeploy client.
 

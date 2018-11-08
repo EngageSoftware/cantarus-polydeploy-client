@@ -24,7 +24,8 @@
       "path": "cantarus-polydeploy-client"
     },
     {
-      "path": "images"
+      "path": "static",
+      "addressable": true
     }
   ],
   "contributions": [
