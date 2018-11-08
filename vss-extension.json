@@ -14,9 +14,20 @@
   "icons": {
     "default": "polydeploy-logo-icon.png"
   },
+  "content": {
+    "details": {
+      "path": "overview.md"
+    }
+  },
   "files": [
     {
       "path": "cantarus-polydeploy-client"
+    },
+    {
+      "path": "task-config-screenshot.png"
+    },
+    {
+      "path": "polydeploy-logo-icon.png"
     }
   ],
   "contributions": [

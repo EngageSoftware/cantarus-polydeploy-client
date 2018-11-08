@@ -31,7 +31,7 @@
     },
     {
       "name": "target-uri",
-      "type": "strubg",
+      "type": "string",
       "label": "Target URI",
       "defaultValue": "",
       "required": true,
