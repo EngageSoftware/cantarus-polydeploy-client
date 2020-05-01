@@ -7,5 +7,6 @@ install:
 - |-
     cd cantarus-polydeploy-client
     npm ci
+    cd ..
     
 script: powershell -File ./package.ps1
