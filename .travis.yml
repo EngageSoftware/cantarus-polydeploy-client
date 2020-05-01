@@ -1,4 +1,6 @@
 os: windows
+language: node_js
+
 install:
 - |-
     cd cantarus-polydeploy-client
