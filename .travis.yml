@@ -9,4 +9,4 @@ install:
     npm ci
     cd ..
     
-script: powershell -File ./package.ps1
+script: powershell -File ./package.ps1 -ExecutionPolicy Bypass
