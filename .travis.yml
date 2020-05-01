@@ -1,9 +1,11 @@
 os: windows
 language: node_js
+node_js:
+    - lts/*
 
 install:
 - |-
     cd cantarus-polydeploy-client
     npm ci
     
-test: powershell -File ./package.ps1
+script: powershell -File ./package.ps1
