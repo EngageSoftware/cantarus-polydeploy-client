@@ -15,7 +15,7 @@
     "vsts-task-lib": "^2.7.0"
   },
   "devDependencies": {
-    "tfx-cli": "^0.7.11"
+    "tfx-cli": "^0.8.1"
   },
   "scripts": {
     "package": "cd .. && tfx extension create --manifest-globs vss-extension.json"
