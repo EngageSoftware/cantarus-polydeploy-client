@@ -30,8 +30,12 @@ if (installationStatusTimeout) {
     .arg(installationStatusTimeout);
 }
 
-const result = toolRunner.execSync();
-
-if (result.code != 0) {
-  throw new Error(result.error ? result.error.message : result.stderr);
-}
+toolRunner.exec().then(
+  () => {
+    taskLib.setResult(taskLib.TaskResult.Succeeded, "Deploy succeeded");
+  },
+  (err) => {
+    taskLib.error(err.message);
+    taskLib.setResult(taskLib.TaskResult.Failed, "Deploy failed");
+  }
+);
