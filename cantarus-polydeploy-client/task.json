@@ -52,6 +52,14 @@
       "defaultValue": "",
       "required": true,
       "helpMarkDown": "The Encryption key of the PolyDeploy API user"
+    },
+    {
+      "name": "installation-status-timeout",
+      "type": "string",
+      "label": "Installation Status Timeout",
+      "defaultValue": "60",
+      "required": false,
+      "helpMarkDown": "The number of seconds to ignore 404 errors when checking installation status"
     }
   ],
   "execution": {
