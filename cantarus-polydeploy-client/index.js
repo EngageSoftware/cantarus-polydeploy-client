@@ -1,5 +1,5 @@
 const path = require("path");
-const taskLib = require("vsts-task-lib/task");
+const taskLib = require("azure-pipelines-task-lib/task");
 
 const deployPath = taskLib.getPathInput("deploy-path", true, true);
 const targetUri = taskLib.getInput("target-uri", true);
