@@ -62,9 +62,11 @@
       "helpMarkDown": "The number of seconds to ignore 404 errors when checking installation status"
     }
   ],
+  "minimumAgentVersion": "2.144.0",
   "execution": {
-    "Node": {
-      "target": "index.js"
+    "Node10": {
+      "target": "index.js",
+      "argumentFormat": ""
     }
   }
 }
