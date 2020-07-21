@@ -10,10 +10,10 @@
   "version": {
     "Major": 1,
     "Minor": 0,
-    "Patch": 2
+    "Patch": 3
   },
   "satisfies": ["cantarus-deploy-client"],
-  "instanceNameFormat": "$(name)",
+  "instanceNameFormat": "Use Cantarus PolyDeploy $(versionSpec)",
   "groups": [],
   "inputs": [
     {
