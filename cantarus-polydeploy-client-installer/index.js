@@ -35,7 +35,10 @@ function downloadDeployClient(versionSpec) {
       )
     )
     .then((releases) => {
-      version = toolLib.evaluateVersions(releases.keys(), versionSpec);
+      version = toolLib.evaluateVersions(
+        Array.from(releases.keys()),
+        versionSpec
+      );
       return releases.get(version);
     })
     .then((release) => getDeployClientAsset(release))
