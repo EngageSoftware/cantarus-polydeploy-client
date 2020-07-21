@@ -1,5 +1,5 @@
 {
-  "name": "cantarus-polydeploy-client",
+  "name": "cantarus-polydeploy-client-installer",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -12,7 +12,8 @@
   "author": "Engage Software",
   "license": "Apache-2.0",
   "dependencies": {
-    "azure-pipelines-task-lib": "^2.9.6"
+    "azure-pipelines-task-lib": "^2.9.6",
+    "azure-pipelines-tool-lib": "^0.13.2"
   },
   "devDependencies": {
     "tfx-cli": "^0.8.1"

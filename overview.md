@@ -18,6 +18,4 @@ to install.  The task will automatically find any `*.zip` files in that folder
 and its subfolders and pass them to the PolyDeploy client to be installed.
 ![Task configuration screen](./static/task-config-screenshot.png)
 
-This version of the task includes version 0.8.0 of the PolyDeploy client.
-
 This Azure DevOps task is a project of [Engage Software](https://engagesoftware.com/).

@@ -1,4 +1,3 @@
-const path = require("path");
 const taskLib = require("azure-pipelines-task-lib/task");
 
 const deployPath = taskLib.getPathInput("deploy-path", true, true);
@@ -15,7 +14,7 @@ taskLib.findMatch(deployPath, "**/*.zip").forEach((zipPath) => {
 });
 
 let toolRunner = taskLib
-  .tool(path.join(__dirname, "DeployClient.exe"))
+  .tool("DeployClient.exe")
   .arg("--target-uri")
   .arg(targetUri)
   .arg("--api-key")

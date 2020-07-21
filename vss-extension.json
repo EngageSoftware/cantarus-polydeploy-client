@@ -2,14 +2,14 @@
   "manifestVersion": 1,
   "id": "cantarus-polydeploy-client",
   "name": "Cantarus PolyDeploy for DNN",
-  "version": "0.9.3",
+  "version": "1.0.0",
   "publisher": "engage-software",
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
     }
   ],
-  "description": "Tools for deploying DNN extensions with Cantarus PolyDeploy. Includes one build/release task.",
+  "description": "Tools for deploying DNN extensions with Cantarus PolyDeploy. Includes two build/release tasks, one to download the Deploy Client, and one to do the deployment.",
   "categories": ["Build and release"],
   "icons": {
     "default": "images/polydeploy-logo-icon.png"
@@ -24,6 +24,9 @@
       "path": "cantarus-polydeploy-client"
     },
     {
+      "path": "cantarus-polydeploy-client-installer"
+    },
+    {
       "path": "static",
       "addressable": true
     }
@@ -35,6 +38,14 @@
       "targets": ["ms.vss-distributed-task.tasks"],
       "properties": {
         "name": "cantarus-polydeploy-client"
+      }
+    },
+    {
+      "id": "cantarus-polydeploy-client-installer",
+      "type": "ms.vss-distributed-task.task",
+      "targets": ["ms.vss-distributed-task.tasks"],
+      "properties": {
+        "name": "cantarus-polydeploy-client-installer"
       }
     }
   ],

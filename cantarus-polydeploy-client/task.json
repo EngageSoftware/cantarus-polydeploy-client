@@ -8,10 +8,11 @@
   "visibility": ["Build", "Release"],
   "author": "Engage Software",
   "version": {
-    "Major": 0,
-    "Minor": 9,
-    "Patch": 3
+    "Major": 1,
+    "Minor": 0,
+    "Patch": 0
   },
+  "demands": ["cantarus-deploy-client"],
   "instanceNameFormat": "$(name)",
   "groups": [
     {
@@ -54,6 +55,7 @@
       "helpMarkDown": "The Encryption key of the PolyDeploy API user"
     },
     {
+      "groupName": "advanced",
       "name": "installation-status-timeout",
       "type": "string",
       "label": "Installation Status Timeout",
