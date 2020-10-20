@@ -20,6 +20,16 @@ function isValidRelease(release) {
   return Boolean(getDeployClientAsset(release));
 }
 
+function downloadUrl(url) {
+  return toolLib
+    .downloadTool(url)
+    .then((downloadPath) => toolLib.extractZip(downloadPath))
+    .then((unzippedPath) =>
+      toolLib.cacheDir(unzippedPath, "DeployClient.exe", version)
+    )
+    .then((cachePath) => toolLib.prependPath(cachePath));
+}
+
 function downloadDeployClient(versionSpec) {
   let version;
   return toolLib
@@ -43,17 +53,15 @@ function downloadDeployClient(versionSpec) {
     })
     .then((release) => getDeployClientAsset(release))
     .then((asset) => asset.browser_download_url)
-    .then((url) => toolLib.downloadTool(url))
-    .then((downloadPath) => toolLib.extractZip(downloadPath))
-    .then((unzippedPath) =>
-      toolLib.cacheDir(unzippedPath, "DeployClient.exe", version)
-    )
-    .then((cachePath) => toolLib.prependPath(cachePath))
+    .then((url) => downloadUrl(url))
     .then(() => version);
 }
 
 function main() {
-  const versionSpec = taskLib.getInput("versionSpec", true);
+  const customDownloadUrl = taskLib.getInput("customDownloadUrl");
+  const versionSpec =
+    taskLib.getInput("versionSpec", true) +
+    (customDownloadUrl ? "-custom" : "");
   const checkLatest = toolLib.isExplicitVersion(versionSpec)
     ? false
     : taskLib.getBoolInput("checkLatest", true);
@@ -69,6 +77,30 @@ function main() {
       "Using cached DeployClient from " + toolPath
     );
     return Promise.resolve();
+  }
+
+  if (customDownloadUrl) {
+    return downloadUrl(customDownloadUrl).then(
+      () => {
+        taskLib.setResult(
+          taskLib.TaskResult.Succeeded,
+          "Downloaded custom DeployClient " +
+            versionSpec +
+            " from " +
+            customDownloadUrl
+        );
+      },
+      (err) => {
+        taskLib.error(err.message);
+        taskLib.setResult(
+          taskLib.TaskResult.Failed,
+          "Unable to download custom DeployClient " +
+            versionSpec +
+            " from " +
+            customDownloadUrl
+        );
+      }
+    );
   }
 
   return downloadDeployClient(versionSpec).then(

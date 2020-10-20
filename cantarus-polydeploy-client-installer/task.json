@@ -14,7 +14,13 @@
   },
   "satisfies": ["cantarus-deploy-client"],
   "instanceNameFormat": "Use Cantarus PolyDeploy $(versionSpec)",
-  "groups": [],
+  "groups": [
+    {
+      "name": "advanced",
+      "displayName": "Advanced",
+      "isExpanded": false
+    }
+  ],
   "inputs": [
     {
       "name": "versionSpec",
@@ -31,6 +37,14 @@
       "defaultValue": "false",
       "required": true,
       "helpMarkDown": "Whether to always check for newer versions, or use a cached version."
+    },
+    {
+      "groupName": "advanced",
+      "name": "customDownloadUrl",
+      "type": "string",
+      "label": "Custom Download URL",
+      "required": false,
+      "helpMarkDown": "A URL to download the Deploy Client from, rather than downloading the GitHub release."
     }
   ],
   "minimumAgentVersion": "2.144.0",
