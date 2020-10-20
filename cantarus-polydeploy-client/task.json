@@ -68,7 +68,8 @@
   "execution": {
     "Node10": {
       "target": "index.js",
-      "argumentFormat": ""
+      "argumentFormat": "",
+      "platforms": [ "windows" ]
     }
   }
 }
