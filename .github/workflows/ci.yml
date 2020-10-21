@@ -29,6 +29,8 @@ jobs:
       run: |
         cd cantarus-polydeploy-client
         npm ci
+        cd ../cantarus-polydeploy-client-installer
+        npm ci
         cd ..
         ./package.ps1
     - name: Upload a Build Artifact
