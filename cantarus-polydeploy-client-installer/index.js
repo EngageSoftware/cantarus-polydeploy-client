@@ -1,5 +1,6 @@
 const fs = require("fs");
 const util = require("util");
+const semver = require("semver");
 const taskLib = require("azure-pipelines-task-lib");
 const toolLib = require("azure-pipelines-tool-lib/tool");
 
@@ -20,7 +21,7 @@ function isValidRelease(release) {
   return Boolean(getDeployClientAsset(release));
 }
 
-function downloadUrl(url) {
+function downloadUrl(url, version) {
   return toolLib
     .downloadTool(url)
     .then((downloadPath) => toolLib.extractZip(downloadPath))
@@ -53,7 +54,7 @@ function downloadDeployClient(versionSpec) {
     })
     .then((release) => getDeployClientAsset(release))
     .then((asset) => asset.browser_download_url)
-    .then((url) => downloadUrl(url))
+    .then((url) => downloadUrl(url, version))
     .then(() => version);
 }
 
@@ -80,7 +81,8 @@ function main() {
   }
 
   if (customDownloadUrl) {
-    return downloadUrl(customDownloadUrl).then(
+    const version = semver.coerce(versionSpec).version + "-custom";
+    return downloadUrl(customDownloadUrl, version).then(
       () => {
         taskLib.setResult(
           taskLib.TaskResult.Succeeded,
