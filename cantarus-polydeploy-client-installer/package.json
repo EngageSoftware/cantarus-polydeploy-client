@@ -12,12 +12,12 @@
   "author": "Engage Software",
   "license": "Apache-2.0",
   "dependencies": {
-    "azure-pipelines-task-lib": "^2.11.3",
-    "azure-pipelines-tool-lib": "^0.13.2",
-    "semver": "^5.7.1"
+    "azure-pipelines-task-lib": "^3.1.10",
+    "azure-pipelines-tool-lib": "^0.13.3",
+    "semver": "^7.3.5"
   },
   "devDependencies": {
-    "tfx-cli": "^0.8.3"
+    "tfx-cli": "^0.9.3"
   },
   "scripts": {
     "package": "cd .. && tfx extension create --manifest-globs vss-extension.json"

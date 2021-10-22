@@ -1,8 +1,14 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/cantarus-polydeploy-client"
-  schedule:
-    interval: daily
-    time: "07:00"
-    timezone: "America/Chicago"
+  - package-ecosystem: npm
+    directory: "/cantarus-polydeploy-client"
+    schedule:
+      interval: daily
+      time: "07:00"
+      timezone: "America/Chicago"
+  - package-ecosystem: npm
+    directory: "/cantarus-polydeploy-client-installer"
+    schedule:
+      interval: daily
+      time: "07:00"
+      timezone: "America/Chicago"
