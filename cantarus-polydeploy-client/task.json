@@ -10,7 +10,7 @@
   "version": {
     "Major": 1,
     "Minor": 0,
-    "Patch": 3
+    "Patch": 4
   },
   "demands": ["cantarus-deploy-client"],
   "instanceNameFormat": "Deploy with Cantarus PolyDeploy",
@@ -69,7 +69,7 @@
     "Node10": {
       "target": "index.js",
       "argumentFormat": "",
-      "platforms": [ "windows" ]
+      "platforms": ["windows"]
     }
   }
 }
