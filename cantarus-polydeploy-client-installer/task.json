@@ -53,6 +53,11 @@
       "target": "index.js",
       "argumentFormat": "",
       "platforms": ["windows"]
+    },
+    "Node16": {
+      "target": "index.js",
+      "argumentFormat": "",
+      "platforms": ["windows"]
     }
   }
 }
