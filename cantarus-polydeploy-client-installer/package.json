@@ -13,7 +13,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@types/node": "^16.18.11",
-    "azure-pipelines-task-lib": "^4.1.0",
+    "azure-pipelines-task-lib": "^4.2.0",
     "azure-pipelines-tool-lib": "^2.0.0-preview",
     "semver": "^7.3.8"
   },
