@@ -43,3 +43,4 @@ jobs:
         with:
           path: "*.vsix"
           if-no-files-found: error
+          name: "VSIX from Node.js ${{ matrix.node-version }} build"
