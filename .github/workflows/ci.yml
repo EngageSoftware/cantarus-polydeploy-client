@@ -24,6 +24,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+          cache: npm
+          cache-dependency-path: |
+            cantarus-polydeploy-client-installer/package-lock.json
+            cantarus-polydeploy-client/package-lock.json
+
       - name: npm install, package
         run: |
           cd cantarus-polydeploy-client
@@ -32,6 +37,7 @@ jobs:
           npm ci
           cd ..
           ./package.ps1
+
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.0
         with:
