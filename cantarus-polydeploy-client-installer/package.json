@@ -14,7 +14,7 @@
   "dependencies": {
     "@types/node": "^16.18.11",
     "azure-pipelines-task-lib": "^4.3.0",
-    "azure-pipelines-tool-lib": "^2.0.0-preview",
+    "azure-pipelines-tool-lib": "^2.0.1",
     "semver": "^7.3.8"
   },
   "devDependencies": {
