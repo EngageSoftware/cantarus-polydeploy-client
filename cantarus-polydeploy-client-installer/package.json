@@ -15,7 +15,7 @@
     "@types/node": "^16.18.11",
     "azure-pipelines-task-lib": "^4.4.0",
     "azure-pipelines-tool-lib": "^2.0.4",
-    "semver": "^7.5.2"
+    "semver": "^7.5.3"
   },
   "devDependencies": {
     "tfx-cli": "^0.15.0"
