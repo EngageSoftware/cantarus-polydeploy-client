@@ -39,7 +39,7 @@ jobs:
           ./package.ps1
 
       - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v3.1.2
+        uses: actions/upload-artifact@v3.1.3
         with:
           path: "*.vsix"
           if-no-files-found: error
