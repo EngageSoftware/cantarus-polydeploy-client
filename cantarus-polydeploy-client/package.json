@@ -13,7 +13,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@types/node": "^16.18.11",
-    "azure-pipelines-task-lib": "^4.9.0"
+    "azure-pipelines-task-lib": "^4.9.1"
   },
   "devDependencies": {
     "tfx-cli": "^0.16.0"
