@@ -18,7 +18,7 @@
     "semver": "^7.7.0"
   },
   "devDependencies": {
-    "tfx-cli": "^0.19.0"
+    "tfx-cli": "^0.20.0"
   },
   "scripts": {
     "package": "cd .. && tfx extension create --manifest-globs vss-extension.json"
