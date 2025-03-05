@@ -16,7 +16,7 @@
     "azure-pipelines-task-lib": "^5.0.0"
   },
   "devDependencies": {
-    "tfx-cli": "^0.20.0"
+    "tfx-cli": "^0.21.0"
   },
   "scripts": {
     "package": "cd .. && tfx extension create --manifest-globs vss-extension.json"
