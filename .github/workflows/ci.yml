@@ -16,11 +16,11 @@ jobs:
 
     strategy:
       matrix:
-        node-version: ["latest", "-1", "-2"]
+        node-version: ["*", "-1", "-2"]
 
     steps:
       - uses: actions/checkout@v6
-      - name: Use Node.js lts/${{ matrix.node-version }}
+      - name: Use Node.js LTS ${{ matrix.node-version }}
         uses: actions/setup-node@v6
         with:
           node-version: "lts/${{ matrix.node-version }}"
@@ -43,4 +43,4 @@ jobs:
         with:
           path: "*.vsix"
           if-no-files-found: error
-          name: "VSIX from Node.js LTS ${{ matrix.node-version }} build"
+          name: ${{ format('VSIX from Node.js LTS {0} build', matrix.node-version == '*' && 'latest' || matrix.node-version) }}
