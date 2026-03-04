@@ -40,8 +40,8 @@ jobs:
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v7.0.0
+        if: ${{ matrix.node-version == '*' }}
         with:
           path: "*.vsix"
           archive: false
           if-no-files-found: error
-          name: ${{ format('VSIX from Node.js LTS {0} build', matrix.node-version == '*' && 'latest' || matrix.node-version) }}
